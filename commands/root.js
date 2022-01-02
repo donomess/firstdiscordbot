@@ -11,7 +11,7 @@ module.exports = {
                 .setRequired(true)),
     async execute(interaction) { 
         const num = interaction.options.getNumber('num');
-        await interaction.reply(math.sqrt(num));
+        await interaction.reply(String(math.sqrt(num)));
 
         console.log([num]);
     },
