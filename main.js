@@ -15,11 +15,12 @@ for(const file of commandFiles){
 }
 
 client.once('ready', () => {
-    console.log('Bot Ready.');
+    console.log(`Ready! Logged in as ${c.user.tag}`);
 });
 
 client.on('interactionCreate', async interaction => {
     if(!interaction.isCommand()) return;
+    console.log(`${interaction.user.tag} in #${interaction.channel.name} triggered an interaction.`);
 
     const command = client.commands.get(interaction.commandName);
 
