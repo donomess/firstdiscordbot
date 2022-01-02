@@ -10,6 +10,9 @@ module.exports = {
                 .setDescription('Number to find the root of.')
                 .setRequired(true)),
     async execute(interaction) { 
+        const num = interaction.options.getNumber('num');
         await interaction.reply(math.sqrt(num));
+
+        console.log([num]);
     },
 };

@@ -14,6 +14,10 @@ module.exports = {
                 .setDescription('Number 2 to subtract')
                 .setRequired(true)),
     async execute(interaction) { 
+        const num1 = interaction.options.getNumber('num1');
+        const num2 = interaction.options.getNumber('num2');
         await interaction.reply(math.evaluate(num1 - num2));
+
+        console.log([num1, num2]);
     },
 };
